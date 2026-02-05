@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suryavanshi Tours & Travels | Explore Rajasthan</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --royal-gold: #D4AF37;
+            --jodhpur-blue: #0076CE;
+            --jaipur-pink: #EF9B8D;
+            --dark-maroon: #800000;
+            --light-bg: #fdfaf5;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--light-bg);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            background: #fff;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--dark-maroon);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-left: 25px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--jodhpur-blue);
+        }
+
+        /* Hero Section - Hawa Mahal & Udaipur Vibe */
+        .hero {
+            height: 80vh;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+                        url('https://images.unsplash.com/photo-1603262110263-fb0112e7cc33?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin-bottom: 20px;
+        }
+
+        /* Packages Section */
+        .section-title {
+            text-align: center;
+            margin: 50px 0 30px;
+            font-size: 2.5rem;
+            color: var(--dark-maroon);
+        }
+
+        .container {
+            width: 90%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            padding-bottom: 50px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            border-bottom: 4px solid var(--royal-gold);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card-img {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card-content h3 {
+            margin-bottom: 10px;
+            color: var(--jodhpur-blue);
+        }
+
+        .price {
+            font-weight: bold;
+            color: var(--dark-maroon);
+            font-size: 1.2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--dark-maroon);
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 15px;
+            font-size: 0.9rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a1a1a;
+            color: #ccc;
+            padding: 50px 5% 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            border-bottom: 1px solid #444;
+            padding-bottom: 30px;
+        }
+
+        .footer-col h4 {
+            color: var(--royal-gold);
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .bottom-bar {
+            text-align: center;
+            padding-top: 20px;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Suryavanshi Tours & Travels</div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Jaipur</a></li>
+            <li><a href="#">Jodhpur</a></li>
+            <li><a href="#">Packages</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <h1>Experience the Royal Heritage</h1>
+        <p>From the Pink City's Hawa Mahal to the Majestic Forts of Udaipur, explore Rajasthan with the spirit of Suryavanshi hospitality.</p>
+        <a href="#packages" class="btn" style="background: var(--royal-gold); color: #000; font-weight: bold;">View Affordable Plans</a>
+    </header>
+
+    <h2 class="section-title" id="packages">Our Exclusive Packages</h2>
+    <div class="container">
+        
+        <div class="card">
+            <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=500&q=60');"></div>
+            <div class="card-content">
+                <h3>Single Day City Tour</h3>
+                <p>Perfect for quick explorers. Covers Hawa Mahal, Amer Fort, and City Palace with local guide.</p>
+                <p class="price">Starting at ₹1,499/-</p>
+                <a href="#" class="btn">Book Now</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1615831414419-792822457833?auto=format&fit=crop&w=500&q=60');"></div>
+            <div class="card-content">
+                <h3>Full Holiday Package</h3>
+                <p>4 Nights / 5 Days covering Jaipur, Jodhpur, and Udaipur with Luxury Stay.</p>
+                <p class="price">Starting at ₹12,999/-</p>
+                <a href="#" class="btn">Book Now</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=500&q=60');"></div>
+            <div class="card-content">
+                <h3>Rental Car Service</h3>
+                <p>Self-drive or Chauffeur driven. Wide range of Sedans and SUVs available for city tours.</p>
+                <p class="price">Starting at ₹2,500/Day</p>
+                <a href="#" class="btn">Book Now</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=500&q=60');"></div>
+            <div class="card-content">
+                <h3>Force Traveler (Group)</h3>
+                <p>Spacious 12-17 seater Force Travelers for large families and groups of friends.</p>
+                <p class="price">Starting at ₹18/km</p>
+                <a href="#" class="btn">Book Now</a>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Suryavanshi Tours</h4>
+                <p>Your trusted partner for exploring the cultural heart of Rajasthan. We specialize in making your journey royal, affordable, and memorable.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Our Services</h4>
+                <ul>
+                    <li><i class="fas fa-check"></i> Luxury Accommodation</li>
+                    <li><i class="fas fa-check"></i> Family & Friends Plans</li>
+                    <li><i class="fas fa-check"></i> Corporate Group Tours</li>
+                    <li><i class="fas fa-check"></i> Heritage Site Walks</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Trip Inclusion</h4>
+                <ul>
+                    <li><i class="fas fa-hotel"></i> Premium Hotel Stay</li>
+                    <li><i class="fas fa-car"></i> Pickup & Drop</li>
+                    <li><i class="fas fa-utensils"></i> Complimentary Breakfast</li>
+                    <li><i class="fas fa-map-marked-alt"></i> Certified Tour Guide</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                <p><i class="fas fa-envelope"></i> info@suryavanshitravels.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> MI Road, Jaipur / Clock Tower, Jodhpur</p>
+            </div>
+        </div>
+        <div class="bottom-bar">
+            &copy; 2026 Suryavanshi Tours and Travels. All Rights Reserved.
+        </div>
+    </footer>
+
+</body>
+</html>
